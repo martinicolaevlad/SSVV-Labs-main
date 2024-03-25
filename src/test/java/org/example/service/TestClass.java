@@ -1,17 +1,14 @@
-package org.example;
+package org.example.service;
 import org.example.domain.Tema;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.example.repository.NotaXMLRepo;
 import org.example.repository.StudentXMLRepo;
 import org.example.repository.TemaXMLRepo;
-import org.example.service.Service;
 import org.example.validation.NotaValidator;
 import org.example.validation.StudentValidator;
 import org.example.validation.TemaValidator;
 import org.example.validation.ValidationException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 //@RunWith(JUnit4.class)
 public class TestClass {
