@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertThrows;
 
-public class ServiceTest {
+public class TestService {
     @Test
     public void testAddStudentWithValidData() {
         // Arrange
