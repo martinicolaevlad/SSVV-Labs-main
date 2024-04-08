@@ -1,6 +1,7 @@
 package org.example.service;
 
 import org.example.domain.Student;
+import org.example.domain.Tema;
 import org.example.validation.StudentValidator;
 import org.example.validation.ValidationException;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
@@ -147,5 +148,28 @@ public class TestService {
 
         // Act & Assert
         assertDoesNotThrow(() -> validator.validate(student));
+    }
+
+    public static Service service;
+    @Test
+    public void addTema_Invalid_deadline_smallerThan1_ThrowsError() {
+
+        String nrTema = "100";
+        String descriere = "test";
+        int deadline = 0;
+        int primire = 11;
+
+        Tema tema = new Tema(nrTema, descriere, deadline, primire );
+
+        try{
+            service.addTema(tema);
+            assert(false);
+
+        }catch (ValidationException ve){
+            System.out.println("Validation Exception: " + ve.getMessage());
+            assert(true);
+
+        }
+
     }
 }
